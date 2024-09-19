@@ -1,7 +1,5 @@
-# Environment variables
+# .gitignore
+venv/
+__pycache__/
+*.pyc
 .env
-
-# Other common files to ignore
-node_modules/
-*.log
-.DS_Store
