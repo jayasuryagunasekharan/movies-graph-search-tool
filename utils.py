@@ -16,10 +16,10 @@ logger = logging.getLogger(__name__)
 load_dotenv()
 
 # Try to get secrets from Streamlit, fall back to environment variables
-NEO4J_URI = st.secrets.get("NEO4J_URI") or os.getenv("NEO4J_URI")
-NEO4J_USERNAME = st.secrets.get("NEO4J_USERNAME") or os.getenv("NEO4J_USERNAME")
-NEO4J_PASSWORD = st.secrets.get("NEO4J_PASSWORD") or os.getenv("NEO4J_PASSWORD")
-GOOGLE_API_KEY = st.secrets.get("GOOGLE_API_KEY") or os.getenv("GOOGLE_API_KEY")
+NEO4J_URI = os.getenv("NEO4J_URI")
+NEO4J_USERNAME = os.getenv("NEO4J_USERNAME")
+NEO4J_PASSWORD = os.getenv("NEO4J_PASSWORD")
+GOOGLE_API_KEY = os.getenv("GOOGLE_API_KEY")
 
 def main(query):
     logger.info(f"Attempting to connect to Neo4j at {NEO4J_URI}")
