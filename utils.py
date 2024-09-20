@@ -8,9 +8,9 @@ from langchain_community.graphs import Neo4jGraph
 load_dotenv()
 
 os.environ["GOOGLE_API_KEY"] = os.getenv("GOOGLE_API_KEY")
-os.environ["NEO4J_URI"] = os.getenv("NEO4J_URI")
+os.environ["NEO4J_URI"] = os.getenv("NEO4J_URI") or "bolt://localhost:7687"
 os.environ["NEO4J_USERNAME"] = os.getenv("NEO4J_USERNAME")
-os.environ["NEO4J_PASSWORD"] = os.getenv("NEO4J_PASSWORD")
+os.environ["NEO4J_PASSWORD"] = os.getenv("NEO4J_PASSWORD") or "Neo4jgrad!23"
 
 def main(query):
 
